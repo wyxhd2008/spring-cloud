@@ -1,0 +1,26 @@
+---
+server: 
+ port: 8001
+spring: 
+ application: 
+  name: eureka-server
+ profiles: cloud1
+eureka: 
+ instance: 
+  hostname: cloud1
+ client: 
+  serviceUrl: 
+   defaultZone: http://cloud2:8002/eureka/
+---
+server: 
+ port: 8002
+spring: 
+ application: 
+  name: eureka-server
+ profiles: cloud2
+eureka: 
+ instance: 
+  hostname: cloud2
+ client: 
+  serviceUrl: 
+   defaultZone: http://cloud1:8001/eureka/

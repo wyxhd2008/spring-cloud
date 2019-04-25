@@ -1,0 +1,15 @@
+server:
+ port: 8200
+spring:
+ application:
+  name: spring-cloud-service-feign-consumer
+eureka:
+ instance:
+  hostname: localhost
+ client:
+  registerWithEureka: false
+  serviceUrl:
+   defaultZone: http://localhost:8001/eureka/,http://localhost:8002/eureka
+feign:
+ hystrix:
+  enabled: true

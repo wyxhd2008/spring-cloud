@@ -1,0 +1,14 @@
+spring: 
+ application: 
+  name: spring-cloud-service-provider
+eureka: 
+ instance: 
+  hostname: localhost
+ client: 
+  serviceUrl: 
+   defaultZone: http://localhost:8001/eureka/, http://localhost:8002/eureka/
+info: 
+  spring.application.name: ${spring.application.name}
+  server.port: ${server.port}
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

@@ -1,0 +1,12 @@
+server:
+ port: 8100
+spring:
+ application:
+  name: spring-cloud-service-consumer
+eureka:
+ instance:
+  hostname: localhost
+ client:
+  registerWithEureka: false
+  serviceUrl:
+   defaultZone: http://localhost:8001/eureka/,http://localhost:8002/eureka
